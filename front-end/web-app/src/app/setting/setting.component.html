@@ -1,0 +1,12 @@
+<div class = "container">
+    <h4 class = "text-center">Settings</h4>
+    <div class="alert alert-success" role="alert" (click) = "onClick(1)">Customize Real-Time Display</div>
+    <app-customize-rt-display *ngIf = "customize_show" (submit) = "onClick(1)"></app-customize-rt-display>
+	<div class="alert alert-success" role="alert" (click) = "onClick(2)">Image Library</div>
+	<app-img-library *ngIf = "img_library_show" (submit) = "onClick(2)"></app-img-library>
+	<div class="alert alert-success" role="alert" (click) = "onClick(3)">Detection Notifications</div>
+	<app-detection-notification *ngIf = "notification_show" (submit) = "onClick(3)"></app-detection-notification>
+</div>
+<!-- style = "border-style: solid;
+    border-color: gray;
+    border-width: 2px;" -->

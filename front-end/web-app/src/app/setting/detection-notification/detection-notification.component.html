@@ -1,0 +1,55 @@
+<form (ngSubmit) = "onSetDates(f)" #f = "ngForm">
+	<div class = "container" style = "padding-bottom: 20px;">
+		<div>
+			<h3>Allow Notifications</h3>
+			<div>
+				<label class="switch">
+  					<input type="checkbox" [value] = "notification_allow" (click) = "onClick(0)">
+  					<span class="slider round"></span>
+				</label>
+			</div>
+		</div>
+		<div *ngIf = "notification_allow">
+			<hr>
+			<h3>Threshold for receiving insect alert</h3>
+			<div style = "width: 130px;">
+				<label>Number of insects:</label>
+  					<select class="form-control" name = "insect_number" ngModel value="insect_number">
+    					<option value="1">1</option>
+		        		<option value="2">2</option>
+		           		<option value="3">3</option>
+		           		<option value="4">4</option>
+		           		<option value="5">5</option>
+		           		<option value="6">6</option>
+		           		<option value="7">7</option>
+		           		<option value="8">8</option>
+					</select>
+			</div>
+			<hr>
+			<div>
+				<h3>Notification Type</h3>
+				<div>
+					<h4>Text</h4>
+					<div>
+						<label class="switch">
+  						<input type="checkbox" [value] = "text_allow" (click) = "onClick(1)">
+  						<span class="slider round"></span>
+						</label>
+					</div>
+				</div>
+				<div>
+					<h4>Email</h4>
+					<div>
+						<label class="switch">
+  						<input type="checkbox" [value] = "email_allow" (click) = "onClick(2)">
+  						<span class="slider round"></span>
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-12 text-center">
+		   	<button class="btn btn-primary" type="submit">Save</button>
+		</div>
+	</div>
+</form>

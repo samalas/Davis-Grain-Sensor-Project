@@ -1,0 +1,41 @@
+<form (ngSubmit) = "onSetDates(f)" #f = "ngForm">
+	<div class = "container" style = "padding-bottom: 20px;">
+		<div class="checkbox">
+  			<label><input type="checkbox" name = "Sunday" ngModel value="Sunday">Sunday</label>
+  		</div>
+  		<div class="checkbox">
+  			<label><input type="checkbox" name = "Monday" ngModel value="Monday">Monday</label>
+  		</div>
+  		<div class="checkbox">
+  			<label><input type="checkbox" name = "Tuesday" ngModel value="Tuesday">Tuesday</label>
+  		</div>
+  		<div class="checkbox">
+  			<label><input type="checkbox" name = "Wednesday" ngModel value="Wednesday">Wednesday</label>
+  		</div>
+  		<div class="checkbox">
+  			<label><input type="checkbox" name = "Thursday" ngModel value="Thursday">Thursday</label>
+  		</div>
+  		<div class="checkbox">
+  			<label><input type="checkbox" name = "Friday" ngModel value="Friday">Friday</label>
+  		</div>
+  		<div class="checkbox">
+  			<label><input type="checkbox" name = "Saturday" ngModel value="Saturday">Saturday</label>
+  		</div>		
+		<div style = "width: 90px;">
+			<label>Time of day:</label>
+  			<select class="form-control" name = "time" ngModel value="time">
+    			<option *ngFor = "let time of times">{{time}}</option>
+			</select>
+		</div>
+		<hr>
+		<div style = "width: 147px; padding-bottom: 20px;">
+			<label>Library History Span:</label>
+  			<select class="form-control" name = "span" ngModel value="span">
+    			<option *ngFor = "let span of spans">{{span}}</option>
+			</select>
+		</div>
+		<div class="col-xs-12 text-center">
+		   	<button class="btn btn-primary" type="submit">Save</button>
+		</div>
+	</div>
+</form>

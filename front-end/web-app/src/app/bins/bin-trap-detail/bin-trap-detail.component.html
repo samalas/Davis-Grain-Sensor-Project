@@ -1,0 +1,21 @@
+<div style="margin-left: 20px;">
+	<h2 style = "margin-top: 0px;">Bin {{binId}}, Trap {{trapId}}</h2>
+	<div class = "row" style = "margin-bottom: 20px; padding-left: 16px;">
+		<button type="button" class="btn btn-default btn-sm" (click) = "take_photo(trapId)">
+  			<span class="glyphicon glyphicon-camera" aria-hidden="true" style="padding-right: 20px;"></span>Take picture
+		</button>
+		
+	</div>
+	<app-show-realtime-picture *ngIf = "showImg" 
+		[record] = "realTimeRecord">
+	</app-show-realtime-picture>
+	<div class = "row" style = "margin-bottom: 20px; padding-left: 16px;">
+		<button type="button" class="btn btn-default btn-sm" (click) = "showL()">
+  			<span class="glyphicon glyphicon-picture" aria-hidden="true" style="padding-right: 20px;"></span>View Image Library
+		</button>
+	</div>
+	<app-image-library *ngIf = "showLibrary"
+		[binId] = "binId"
+		[trapId] = "trapId">
+	</app-image-library>
+</div>

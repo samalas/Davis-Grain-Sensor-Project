@@ -1,0 +1,33 @@
+body {
+	min-height: 100vh;  /* need this line to
+					tell body to fill viewport */
+	font-family: 'Roboto', sans-serif;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	margin: 0px;
+  background-color: #EDEDED;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  padding: 1px;
+}
+
+h1 {
+  align-self: center;
+  padding: 20px;
+  padding-left: 5vw;
+  padding-right: 20vw;;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+}
+
+div.nav {
+  padding: 10px
+}

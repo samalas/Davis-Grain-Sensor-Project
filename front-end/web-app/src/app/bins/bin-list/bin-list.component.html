@@ -1,0 +1,10 @@
+<div style = "margin-left: 20px;">
+	<!-- <button class = "btn btn-success"(click) = "getAllRecords()">Get All Records</button>
+	<hr> -->
+	<div></div>
+		<app-binlist-bin
+			*ngFor = "let binEl of bins; let i = index"
+			[bin] = "binEl"
+			[index] = "i">
+			</app-binlist-bin>
+</div>

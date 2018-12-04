@@ -1,0 +1,21 @@
+<div>
+	<div 
+	style="cursor : pointer;" 
+	class = "list-group">
+	<div class="row">
+		<div class = "pull-left">
+			<h2 class = "list-group-item-heading">{{bin.name}}</h2>
+		</div>
+		<button type="button" class="btn btn-default btn-sm pull-right" [routerLink] = "['graph', index]" routerLinkActive = "active">
+			<span 	class="glyphicon glyphicon-stats" 
+					aria-hidden="true">
+			</span>
+		</button>
+	</div>
+		<app-trap-list
+			[traps] = "bin.trap_list"
+			[binIndex1] = "index"
+		></app-trap-list>
+	</div>
+</div>
+

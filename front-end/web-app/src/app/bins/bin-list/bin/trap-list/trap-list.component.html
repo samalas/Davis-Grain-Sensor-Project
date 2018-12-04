@@ -1,0 +1,8 @@
+<div class = "row">
+		<app-trap
+			*ngFor = "let trapEl of traps; let i = index"
+			[trap] = "trapEl"
+			[trapIndex] = "trapEl.name"
+			[binIndex] = "binIndex1">
+			</app-trap>
+</div>

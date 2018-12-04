@@ -1,0 +1,16 @@
+<div>
+	<div style = "margin-bottom: 10px;">
+		<button class = "btn btn-success" (click) = "update()">update</button>
+		<button class = "btn btn-primary" style = "margin-left: 20px;" (click) = "pre()">previous</button>
+		<button class = "btn btn-primary" style = "margin-left: 20px;" (click) = "next()">next</button>
+	</div>
+	<!-- <div class = "col-xs-12" style = "padding-bottom: 20px;">
+		
+	</div> -->
+</div>
+<div *ngFor = "let record of subRecords; let i = index;" style="float : left; margin-right: 10px">
+	<h5>Insect Number : {{record.insectCount}}</h5>
+	<h5>Time : {{record.timestamp}}</h5>
+	<img [src]="record.imgUrl" style = "width: 185px;">
+	<hr>
+</div>

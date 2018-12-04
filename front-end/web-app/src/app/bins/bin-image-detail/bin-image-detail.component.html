@@ -1,0 +1,22 @@
+<div class = "row">
+	<div class = "col-xs-12">
+		<!-- <img [src]="bin.graph"
+		[alt] = "bin.name"
+		class = "img-responsive"
+		style = "max-height: 300px"> -->
+	</div>
+	<button type="button" class="btn btn-default btn-sm" (click) = "createExcel()" style="margin-left: 30px;">
+  		<span class="glyphicon glyphicon-save" aria-hidden="true"></span>  export to excel
+	</button>
+	<div>
+		<canvas id = "canvas">{{chart}}</canvas>
+	</div>
+</div>
+<div class = "row">
+	<div class = "col-xs-12">
+		<h1>{{ bin.name }}</h1>
+	</div>
+</div>
+<div class = "col-md-7">
+		<router-outlet></router-outlet>
+</div>
